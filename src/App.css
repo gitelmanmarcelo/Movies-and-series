@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+header, footer {
+  color: white;
+  background-color: #282c34;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+footer a {
+  color:rgb(62, 62, 255);
+  text-decoration: none;
+}
+
+header h1, footer p{
+  margin-left: 20px;
+}
+
+#logos {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  right: 10px;
+}
+
+#logos img{
+  margin-left: 20px;
+  height: 80%;
+}
+
+#searchDiv {
+  width: 75%;
+  margin: 20px auto;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(159, 159, 159);
+
+}
+
+#searchDiv i {
+  font-size: 2.5rem;
+}
+
+#searchDiv h1 {
+  font-size: 2rem;
+}
+
+#searchDiv input {
+  background-color: white;
+  border-radius: 5px;
+  height: 1.5rem;
+  margin: 6px;
+
+}
+
+#searchDiv button {
+  color: white;
+  background-color: rgb(62, 62, 255);
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+}
+
+#moviesGrid {
+  width: 75%;
+  margin: 20px auto;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+#moviesGrid div, #plot {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#moviesGrid div img {
+  margin-top: 20px;
+  width: 80%;
+}
+
+#moviesGrid div p {
+  margin-top: 10px;
+  color: white;
+}
+
+#moviesGrid div button {
+  width: 70%;
+}
+
+#buttons {
+  display: flex;
+  align-items: flex-end;
+}
+
+#plot button {
+  padding: 6px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+}
+
+#moviesGrid div button, #plot button:first-of-type {
+  margin-top: 10px;
+  color: white;
+  background-color: rgb(62, 62, 255);
+  height: 2rem;
+}
+
+#moviesGrid div button a, #plot button a {
+  color: white;
+  text-decoration: none;
+}
+
+#detailContainer {
+  display: flex;
+  margin: 20px 20px;
+}
+
+#container {
+  margin: 20px 20px;
+}
+
+#detailInfos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  
+}
+
+#detailInfos p {
+  border: 1px grey solid;
+  height: 3rem;
+  padding-top: 16px;
+}
+
+#detailInfos p:first-of-type {
+  padding-top: 0;
+  font-size: 2rem;
+  border: none;
+}
+
+#plot h1, #plot p {
+  margin-bottom: 10px;
+}
+
+
+#plot {
+  color: white;
+  text-align: left;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

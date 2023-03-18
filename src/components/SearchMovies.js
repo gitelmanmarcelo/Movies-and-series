@@ -6,7 +6,7 @@ export const SearchMovies = (props) => {
     return (
         <div>
             <div id='searchDiv'>
-            <h1><i class="fa-solid fa-magnifying-glass"></i> Search for a movie, TV series ...</h1>
+            <h1><i className="fa-solid fa-magnifying-glass"></i> Search for a movie, TV series ...</h1>
             <form onSubmit={props.handleSubmit}>
                 <input id="search"/>
                 <div><button>Search</button></div>

@@ -5,7 +5,7 @@ export const SEARCH_MOVIES = 'SEARCH_MOVIES'
 export const GET_DETAILS = 'GET_DETAILS'
 
 export const searchMovies = (text) => (dispatch) => {
-    fetch('http://www.omdbapi.com/?apikey=a07e1730&s='+text)
+    fetch('https://www.omdbapi.com/?apikey=a07e1730&s='+text)
     .then( res => res.json())
     .then(data => {
         dispatch({
@@ -20,7 +20,7 @@ export const searchMovies = (text) => (dispatch) => {
 
 export const getDetails = (id) => (dispatch) => {
     console.log('action:',id)
-    fetch('http://www.omdbapi.com/?apikey=a07e1730&i='+id)
+    fetch('https://www.omdbapi.com/?apikey=a07e1730&i='+id)
     .then( res => res.json())
     .then(data => {
         dispatch({

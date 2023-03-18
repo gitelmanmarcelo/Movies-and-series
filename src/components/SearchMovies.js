@@ -20,7 +20,7 @@ export const SearchMovies = (props) => {
                         <img src={movie.Poster} alt=""/>
                         <p>{movie.Title}</p>
                         <p>{movie.Year}</p>
-                        <button><Link to={'/details/'+ movie.imdbID}>Movie Details &gt;</Link></button>
+                        <button><Link to={'/Movies-and-series/details/'+ movie.imdbID}>Movie Details &gt;</Link></button>
                         <br/><br/>
                     </div>
                 ))

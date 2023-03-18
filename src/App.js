@@ -16,8 +16,8 @@ function App() {
         </div>
       </header>
       <Routes>
-        <Route path='/' element={<SearchMovies/>}/>
-        <Route path='/details/:id' element={<MovieDetails/>}/>
+        <Route path='/Movies-and-series' element={<SearchMovies/>}/>
+        <Route path='/Movies-and-series/details/:id' element={<MovieDetails/>}/>
       </Routes>
       <footer>
         <p>Using <i class="fa-brands fa-react"></i> React JS & Redux JS integrated with external movies data API <a href="http://www.omdbapi.com">OMDB</a></p>

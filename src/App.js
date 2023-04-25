@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Movie / Series Info</h1>
+        <h3>Movies & Series Info</h3>
         <div id="logos">
           <img src={imdb_img} />
           <img src={react_img} />
@@ -20,7 +20,7 @@ function App() {
         <Route path='/Movies-and-series/details/:id' element={<MovieDetails/>}/>
       </Routes>
       <footer>
-        <p>Using <i class="fa-brands fa-react"></i> React JS & Redux JS integrated with external movies data API <a href="http://www.omdbapi.com">OMDB</a></p>
+        <p>Using <i className="fa-brands fa-react"></i> React JS & Redux JS integrated with external movies data API <a href="http://www.omdbapi.com">OMDB</a></p>
       </footer>
     </div>
   );

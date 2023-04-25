@@ -9,18 +9,36 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 header, footer {
+  width: 100vw;
   color: white;
   background-color: #282c34;
   height: 10vh;
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
+  left: 0;
+}
+
+header {
+  top: 0;
+  border-bottom: 5px solid white;
+}
+
+footer {
+
+
+  bottom: 0;
+  border-top: 5px solid white;
 }
 
 footer a {
@@ -28,8 +46,8 @@ footer a {
   text-decoration: none;
 }
 
-header h1, footer p{
-  margin-left: 20px;
+header h3, footer p{
+  margin-left: 15px;
 }
 
 #logos {
@@ -41,36 +59,32 @@ header h1, footer p{
 }
 
 #logos img{
-  margin-left: 20px;
+  margin-left: 10px;
   height: 80%;
 }
 
 #searchDiv {
-  width: 75%;
+  width: 50%;
   margin: 20px auto;
+  margin-top: 15vh;
   height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: rgb(159, 159, 159);
-
 }
 
 #searchDiv i {
   font-size: 2.5rem;
 }
 
-#searchDiv h1 {
-  font-size: 2rem;
-}
 
 #searchDiv input {
   background-color: white;
   border-radius: 5px;
   height: 1.5rem;
   margin: 6px;
-
 }
 
 #searchDiv button {
@@ -81,12 +95,15 @@ header h1, footer p{
   border-radius: 5px;
 }
 
+
+
 #moviesGrid {
   width: 75%;
   margin: 20px auto;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
+  padding-bottom: 10vh;
 }
 
 #moviesGrid div, #plot {
@@ -111,6 +128,13 @@ header h1, footer p{
   width: 70%;
 }
 
+#moviesGrid #noMovies {
+  width: 75vw;
+  margin-right: 20px;
+  text-align: center;
+  background-color: white;
+}
+
 #buttons {
   display: flex;
   align-items: flex-end;
@@ -124,7 +148,7 @@ header h1, footer p{
   margin-left: 10px;
 }
 
-#moviesGrid div button, #plot button:first-of-type {
+#moviesGrid div button {
   margin-top: 10px;
   color: white;
   background-color: rgb(62, 62, 255);
@@ -136,13 +160,13 @@ header h1, footer p{
   text-decoration: none;
 }
 
-#detailContainer {
-  display: flex;
-  margin: 20px 20px;
+#container {
+  margin: 10vh 0;
 }
 
-#container {
-  margin: 20px 20px;
+#detailContainer {
+  display: flex;
+  margin: 10px 20px;
 }
 
 #detailInfos {
@@ -152,24 +176,42 @@ header h1, footer p{
   
 }
 
+#detailPoster img {
+  height: 100%;
+}
+
+#detailPoster {
+  height: 50vh;
+}
+
 #detailInfos p {
   border: 1px grey solid;
-  height: 3rem;
+  min-height: 2.5rem;
   padding-top: 16px;
 }
 
 #detailInfos p:first-of-type {
   padding-top: 0;
-  font-size: 2rem;
+  font-size: 1.7rem;
+  height: 2rem;
   border: none;
 }
 
-#plot h1, #plot p {
-  margin-bottom: 10px;
+#plot h1 {
+  font-size: 1.7rem;
+
 }
 
+#plot p {
+  font-size: 0.9rem;
+}
+
+#plot h1, #plot p {
+  margin-bottom: 5px;
+}
 
 #plot {
+  width: 95vw;
   color: white;
   text-align: left;
   justify-content: space-around;
@@ -178,34 +220,41 @@ header h1, footer p{
   margin-left: 20px;
 }
 
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#plot button:first-of-type {
   color: white;
+  background-color: rgb(62, 62, 255);
 }
 
-.App-link {
-  color: #61dafb;
+#plot button {
+  margin-top: 5px;
+  height: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 1000px) {
+  #moviesGrid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+@media only screen and (max-width: 750px) {
+  #moviesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  #searchDiv h3, #searchDiv i {
+    font-size: 1rem;
+  }
+
+  #moviesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  #detailContainer {
+    flex-direction: column;
+  }
+}
+
+

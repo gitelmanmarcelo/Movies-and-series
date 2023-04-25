@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 export const SearchMovies = (props) => {
     return (
-        <div>
+        <main>
             <div id='searchDiv'>
-            <h1><i className="fa-solid fa-magnifying-glass"></i> Search for a movie, TV series ...</h1>
+            <h3><i className="fa-solid fa-magnifying-glass"></i> Search for a movie, TV series ...</h3>
             <form onSubmit={props.handleSubmit}>
                 <input id="search"/>
                 <div><button>Search</button></div>
@@ -25,11 +25,11 @@ export const SearchMovies = (props) => {
                     </div>
                 ))
                 :
-                <><h1>no movies</h1></>
+                <div id="noMovies"><h2>no movies</h2></div>
                 }
                 </div>
             </div>
-        </div>
+        </main>
     )
 }
 

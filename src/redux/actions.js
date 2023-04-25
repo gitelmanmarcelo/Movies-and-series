@@ -19,7 +19,6 @@ export const searchMovies = (text) => (dispatch) => {
 }
 
 export const getDetails = (id) => (dispatch) => {
-    console.log('action:',id)
     fetch('https://www.omdbapi.com/?apikey=a07e1730&i='+id)
     .then( res => res.json())
     .then(data => {
